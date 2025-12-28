@@ -1,0 +1,133 @@
+
+:root {
+    --parchment: #FCF8F3;
+    --gold: #C5A059;
+    --deep-red: #7D0000;
+    --text-color: #333;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 9:16 Aspect Ratio for Mobile */
+.mobile-container {
+    width: 100vw;
+    max-width: 414px; /* iPhone size */
+    height: 100vh;
+    max-height: 896px;
+    background: var(--parchment);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid var(--gold);
+}
+
+/* Background Temple Illustration */
+.temple-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.12;
+    z-index: 1;
+}
+
+.mist-overlay {
+    position: absolute;
+    bottom: 0; width: 100%; height: 50%;
+    background: linear-gradient(to bottom, transparent, var(--parchment));
+    z-index: 2;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    text-align: center;
+}
+
+/* Typography */
+.shiva-parvati-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 10px; }
+
+.blessings {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--deep-red);
+    font-size: 0.9rem;
+}
+
+.deity-names {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: var(--text-color);
+}
+
+.couple-section .name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.8rem;
+    color: var(--deep-red);
+    line-height: 1;
+}
+
+.ampersand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin: 10px 0;
+}
+
+.invite-line {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 15px;
+    color: var(--text-color);
+}
+
+.date-container {
+    margin: 30px 0;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 15px 0;
+}
+
+.wedding-date {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+    color: var(--deep-red);
+}
+
+.year { display: block; letter-spacing: 5px; font-size: 0.9rem; color: var(--gold); }
+
+.venue-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.location {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    color: var(--gold);
+}
+
+.agni-kund { font-size: 2rem; margin-bottom: 5px; }
+.footer-note { font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; }
